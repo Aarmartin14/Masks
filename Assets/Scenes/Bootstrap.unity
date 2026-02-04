@@ -133,6 +133,7 @@ GameObject:
   - component: {fileID: 1920278033}
   - component: {fileID: 1920278032}
   - component: {fileID: 1920278031}
+  - component: {fileID: 1920278036}
   m_Layer: 0
   m_Name: GameApp
   m_TagString: Untagged
@@ -169,6 +170,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NetworkBootstrap
   networkManager: {fileID: 1920278034}
   sceneFlow: {fileID: 1920278032}
+  gameSceneName: Game
 --- !u!114 &1920278032
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -267,6 +269,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd1c98240d782c44f8b389042dc8515d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameApp
+--- !u!114 &1920278036
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1920278029}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8896ad793ff5e414ca3282779a5d9029, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameModeState
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

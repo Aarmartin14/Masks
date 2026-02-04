@@ -3,18 +3,37 @@ using UnityEngine;
 public class MainMenuUI : MonoBehaviour
 {
     private NetworkBootstrap net;
+	private NetworkStatusUI status;
 	private SceneFlowController sceneFlow;
+	private GameModeState mode;
 
 	private void Start()
 	{
 		net = FindFirstObjectByType<NetworkBootstrap>();
-		if (net == null) Debug.LogError("NetworkBootstrap not found. Did you start from Bootstrap Scene?");
-
+		status = GetComponent<NetworkStatusUI>();
 		sceneFlow = FindFirstObjectByType<SceneFlowController>();
-		if (sceneFlow == null) Debug.LogError("SceneFlowController not found. Did you start from Bootstrap Scene?");
+		mode = FindFirstObjectByType<GameModeState>();
+		if (net == null) Debug.LogError("NetworkBootstrap not found. Did you start from Bootstrap Scene?");
 	}
 
-	public void Host() => net.StartHostAndLoadGame();
-	public void Join() => net.StartClient();
-	public void Quit() => sceneFlow.Quit();
+	public void Host() {
+
+		if (mode.Mode == GameMode.LocalCoop)
+		{
+			sceneFlow.LoadGame();
+			return;
+		}
+
+		status.Set("Starting Host...");
+		net.StartHostAndLoadGame();
+	}
+	public void Join() {
+		if (mode.Mode == GameMode.LocalCoop)
+		{
+			return;
+		}
+		status.Set("Connecting...");
+		net.StartClient();
+	}
+	public void Quit() => Application.Quit();
 }
