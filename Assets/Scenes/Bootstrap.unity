@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 1920278032}
   - component: {fileID: 1920278031}
   - component: {fileID: 1920278036}
+  - component: {fileID: 1920278037}
   m_Layer: 0
   m_Name: GameApp
   m_TagString: Untagged
@@ -281,6 +282,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8896ad793ff5e414ca3282779a5d9029, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameModeState
+--- !u!114 &1920278037
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1920278029}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e981ab86702e36048bc2469eab483380, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Definitions
+  library: {fileID: 11400000, guid: ec5f5ebb414b1c3409f5d06ebbc4ebbe, type: 2}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

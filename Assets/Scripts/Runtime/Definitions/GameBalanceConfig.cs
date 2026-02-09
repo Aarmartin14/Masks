@@ -3,6 +3,27 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "MaskOfGod/Balance/Game Balance Config", fileName = "GameBalanceConfig")]
 public class GameBalanceConfig : ScriptableObject
 {
+	[Header("Starting Values")]
+	public int startingFollowers = 3;
+	public int startingGold = 0;
+	public int startingFavor = 5;
+	public int startingGodHealth = 100;
+
+	[Header("Room Core Rules")]
+	public int globalMaxRoomLevel = 5;
+	public int globalMaxRoomDamage = 5;
+
+	[Header("Follower Speedup")]
+	public float followerSpeedFactor = 0.5f;
+
+	[Header("Loyalty")]
+	public float loyaltyDrainPerSecond = 1f;
+	public float loyaltyRegenPerSecond = 2f;
+
+	[Header("Room Repair")]
+	public float passiveRepairPerSecond = 0.05f;
+
+	/*
 	// Rooms
 	[Header("Room Settings")]
 	[Header("Sanctuary")]
@@ -109,4 +130,5 @@ public class GameBalanceConfig : ScriptableObject
 	
 	// Cult Logic
 	public int cultStartingMoney = 0;
+	*/
 }
