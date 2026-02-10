@@ -14,7 +14,7 @@ public class RoomTickTest : MonoBehaviour
 		var balance = Definitions.Lib.balance;
 		_cult = new CultState(balance.startingGold, balance.startingFavor, balance.startingGodHealth, balance.startingFollowers);
 
-		var room = new RoomState("room.altar")
+		var room = new RoomState("room.altar", -1)
 		{
 			level = 3,
 			damage = 0,

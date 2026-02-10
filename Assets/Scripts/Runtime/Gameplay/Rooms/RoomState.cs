@@ -1,8 +1,10 @@
 using UnityEngine;
 
-public class RoomState
+public sealed class RoomState
 {
     public string roomTypeId;
+
+	public int SlotIndex { get; private set; }
 
 	public int level = 1;
 	public int damage = 0;
@@ -13,8 +15,9 @@ public class RoomState
 
 	public float passiveRepairAccumulator = 0f;
 
-	public RoomState(string roomTypeId)
+	public RoomState(string roomTypeId, int slotIndex)
 	{
 		this.roomTypeId = roomTypeId;
+		SlotIndex = slotIndex;
 	}
 }

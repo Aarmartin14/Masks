@@ -119,7 +119,7 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &726629580
+--- !u!1 &162784962
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -127,35 +127,41 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 726629582}
-  - component: {fileID: 726629581}
-  - component: {fileID: 726629583}
+  - component: {fileID: 162784964}
+  - component: {fileID: 162784963}
   m_Layer: 0
-  m_Name: GameSceneProbe
+  m_Name: GameSession
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &726629581
+--- !u!114 &162784963
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 726629580}
+  m_GameObject: {fileID: 162784962}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aab70597991f979499b84cc4c5bf8446, type: 3}
+  m_Script: {fileID: 11500000, guid: 5a31670f60a8b2549a6ea48ae2073e80, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::GameSceneProbe
---- !u!4 &726629582
+  m_EditorClassIdentifier: Assembly-CSharp::GameSessionController
+  _playerChurchView: {fileID: 2128804482}
+  _playerNavigator: {fileID: 2128804483}
+  _enemyChurchView: {fileID: 168704750}
+  _enemyNavigator: {fileID: 168704749}
+  _p1Selection: {fileID: 0}
+  _p2Selection: {fileID: 0}
+  _roomCount: 12
+--- !u!4 &162784964
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 726629580}
+  m_GameObject: {fileID: 162784962}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1116.1218, y: 571.62, z: 0}
@@ -164,18 +170,213 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &726629583
+--- !u!1001 &168704748
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 290086419}
+    m_Modifications:
+    - target: {fileID: 7809479793664878731, guid: eb5d9e306bec68e49be4adb0df601f56, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7809479793664878731, guid: eb5d9e306bec68e49be4adb0df601f56, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7809479793664878731, guid: eb5d9e306bec68e49be4adb0df601f56, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7809479793664878731, guid: eb5d9e306bec68e49be4adb0df601f56, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7809479793664878731, guid: eb5d9e306bec68e49be4adb0df601f56, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7809479793664878731, guid: eb5d9e306bec68e49be4adb0df601f56, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7809479793664878731, guid: eb5d9e306bec68e49be4adb0df601f56, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7809479793664878731, guid: eb5d9e306bec68e49be4adb0df601f56, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7809479793664878731, guid: eb5d9e306bec68e49be4adb0df601f56, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7809479793664878731, guid: eb5d9e306bec68e49be4adb0df601f56, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9183796797982713898, guid: eb5d9e306bec68e49be4adb0df601f56, type: 3}
+      propertyPath: m_Name
+      value: Enemy Church
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: eb5d9e306bec68e49be4adb0df601f56, type: 3}
+--- !u!114 &168704749 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6456681721915579967, guid: eb5d9e306bec68e49be4adb0df601f56, type: 3}
+  m_PrefabInstance: {fileID: 168704748}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3595755174d673d4e97fcb6123682648, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Masks.Layouts.Church.GridSlotNavigator
+--- !u!114 &168704750 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4351981228834797430, guid: eb5d9e306bec68e49be4adb0df601f56, type: 3}
+  m_PrefabInstance: {fileID: 168704748}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d85714c3ae875c48abe61313b8440aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ChurchView
+--- !u!1 &290086418
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 290086419}
+  m_Layer: 0
+  m_Name: Gameplay
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &290086419
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 290086418}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2128804484}
+  - {fileID: 1250128485}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &684050148
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 684050150}
+  - component: {fileID: 684050149}
+  - component: {fileID: 684050151}
+  m_Layer: 0
+  m_Name: PlayerInputManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &684050149
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 726629580}
+  m_GameObject: {fileID: 684050148}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6daa6a12c1323984dafc4549bec8ac10, type: 3}
+  m_Script: {fileID: 11500000, guid: 621567455fd1c4ceb811cc8a00b6a1a5, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::RoomTickTest
+  m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.PlayerInputManager
+  m_NotificationBehavior: 0
+  m_MaxPlayerCount: -1
+  m_AllowJoining: 1
+  m_JoinBehavior: 0
+  m_PlayerJoinedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_PlayerLeftEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_JoinAction:
+    m_UseReference: 0
+    m_Action:
+      m_Name: 
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: ad459c10-9337-4f72-96af-729c3a8f6c79
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: 0}
+  m_PlayerPrefab: {fileID: 4432007215123632543, guid: 7dfa6aa94bbb54c46a82e66483091fd2, type: 3}
+  m_SplitScreen: 0
+  m_MaintainAspectRatioInSplitScreen: 0
+  m_FixedNumberOfSplitScreens: -1
+  m_SplitScreenRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+--- !u!4 &684050150
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 684050148}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1122.8429, y: 601.05023, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &684050151
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 684050148}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 519183aed6d1daa4891d49cff4dcbfe4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalCoopBinder
+  _playerChurchView: {fileID: 2128804482}
+  _playerNavigator: {fileID: 2128804483}
+  _enemyChurchView: {fileID: 168704750}
+  _enemyNavigator: {fileID: 168704749}
+  _p1StartSlotIndex: 0
+  _p2StartSlotIndex: 0
 --- !u!1 &840409671
 GameObject:
   m_ObjectHideFlags: 0
@@ -238,7 +439,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 10
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -313,9 +514,100 @@ MonoBehaviour:
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
   m_Version: 2
+--- !u!4 &1250128485 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7809479793664878731, guid: eb5d9e306bec68e49be4adb0df601f56, type: 3}
+  m_PrefabInstance: {fileID: 168704748}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &2128804481
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 290086419}
+    m_Modifications:
+    - target: {fileID: 7809479793664878731, guid: eb5d9e306bec68e49be4adb0df601f56, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7809479793664878731, guid: eb5d9e306bec68e49be4adb0df601f56, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7809479793664878731, guid: eb5d9e306bec68e49be4adb0df601f56, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7809479793664878731, guid: eb5d9e306bec68e49be4adb0df601f56, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7809479793664878731, guid: eb5d9e306bec68e49be4adb0df601f56, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7809479793664878731, guid: eb5d9e306bec68e49be4adb0df601f56, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7809479793664878731, guid: eb5d9e306bec68e49be4adb0df601f56, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7809479793664878731, guid: eb5d9e306bec68e49be4adb0df601f56, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7809479793664878731, guid: eb5d9e306bec68e49be4adb0df601f56, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7809479793664878731, guid: eb5d9e306bec68e49be4adb0df601f56, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9183796797982713898, guid: eb5d9e306bec68e49be4adb0df601f56, type: 3}
+      propertyPath: m_Name
+      value: Player Church
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: eb5d9e306bec68e49be4adb0df601f56, type: 3}
+--- !u!114 &2128804482 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4351981228834797430, guid: eb5d9e306bec68e49be4adb0df601f56, type: 3}
+  m_PrefabInstance: {fileID: 2128804481}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d85714c3ae875c48abe61313b8440aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ChurchView
+--- !u!114 &2128804483 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6456681721915579967, guid: eb5d9e306bec68e49be4adb0df601f56, type: 3}
+  m_PrefabInstance: {fileID: 2128804481}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3595755174d673d4e97fcb6123682648, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Masks.Layouts.Church.GridSlotNavigator
+--- !u!4 &2128804484 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7809479793664878731, guid: eb5d9e306bec68e49be4adb0df601f56, type: 3}
+  m_PrefabInstance: {fileID: 2128804481}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 840409674}
-  - {fileID: 726629582}
+  - {fileID: 162784964}
+  - {fileID: 290086419}
+  - {fileID: 684050150}
